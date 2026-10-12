@@ -1,4 +1,4 @@
-#Infrastructure Health Checks: Turning Technical Signals into Operational Risk
+# Infrastructure Health Checks: Turning Technical Signals into Operational Risk
 Why IT Operations needs more than another dashboard—and how infrastructure health checks can connect technical signals to service decisions.
 Infrastructure teams already collect a huge amount of technical information.
 CPU utilization. Memory pressure. Disk capacity. DNS responses. Network connectivity. Service state. Endpoint availability.
@@ -10,7 +10,7 @@ How serious is it?
 What could it affect?
 What should happen next?
 That is the problem I explored in my latest portfolio project: Infrastructure Health Check & IT Operations Diagnostics.
-From Technical Signals to Operational Decisions
+## From Technical Signals to Operational Decisions
 A useful infrastructure health-check process should do more than collect measurements.
 It should create a structured path:
 Detect → Assess → Prioritize → Recommend → Report → Improve
