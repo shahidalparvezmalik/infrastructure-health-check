@@ -198,6 +198,14 @@ Before adding network targets or Windows services, make sure you are authorized 
 
 
 
+
+## Executive Health Dashboard
+
+![Infrastructure Health Check Executive Dashboard](docs/images/infrastructure-health-check-dashboard.png)
+
+> **Executive dashboard example — health score, severity distribution, component status, top findings and recommended operational actions.** Values shown are synthetic portfolio data.
+
+
 ## Example Output
 
 The repository includes a deterministic synthetic example showing how technical findings are translated into an executive-friendly operational summary.
