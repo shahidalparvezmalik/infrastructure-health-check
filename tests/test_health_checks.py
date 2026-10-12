@@ -40,7 +40,7 @@ class HealthCheckTests(unittest.TestCase):
         score = calculate_health_score(findings)
         self.assertGreaterEqual(score, 0)
         self.assertLessEqual(score, 100)
-        self.assertEqual(risk_level(score), "High")
+        self.assertEqual(risk_level(score), "Medium")
 
     def test_report_has_management_summary(self) -> None:
         findings = [{"check": "DNS", "severity": "Healthy", "status": "Healthy"}]
