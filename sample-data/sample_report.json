@@ -1,0 +1,82 @@
+{
+  "findings": [
+    {
+      "check": "CPU utilization",
+      "observed": {"percent": 62.5},
+      "recommendation": "No action required.",
+      "severity": "Healthy",
+      "status": "Healthy"
+    },
+    {
+      "check": "Memory utilization",
+      "observed": {"percent": 83.0},
+      "recommendation": "Review memory pressure and identify processes contributing to sustained utilization.",
+      "severity": "Medium",
+      "status": "Attention"
+    },
+    {
+      "check": "Disk free capacity",
+      "observed": {"free_percent": 7.5},
+      "recommendation": "Review storage growth, temporary files and application logs; plan capacity action.",
+      "severity": "High",
+      "status": "Attention"
+    },
+    {
+      "check": "Critical application service",
+      "observed": {"running": false},
+      "recommendation": "Investigate service dependencies and restore the approved service.",
+      "severity": "High",
+      "status": "Attention"
+    },
+    {
+      "check": "DNS resolution",
+      "observed": {"response_ms": 18.4},
+      "recommendation": "No action required.",
+      "severity": "Healthy",
+      "status": "Healthy"
+    }
+  ],
+  "generated_at": "2026-01-01T00:00:00+00:00",
+  "host": {
+    "environment": "synthetic",
+    "hostname": "sample-server-01",
+    "purpose": "portfolio demonstration"
+  },
+  "priority_findings": [
+    {
+      "check": "Disk free capacity",
+      "observed": {"free_percent": 7.5},
+      "recommendation": "Review storage growth, temporary files and application logs; plan capacity action.",
+      "severity": "High",
+      "status": "Attention"
+    },
+    {
+      "check": "Critical application service",
+      "observed": {"running": false},
+      "recommendation": "Investigate service dependencies and restore the approved service.",
+      "severity": "High",
+      "status": "Attention"
+    },
+    {
+      "check": "Memory utilization",
+      "observed": {"percent": 83.0},
+      "recommendation": "Review memory pressure and identify processes contributing to sustained utilization.",
+      "severity": "Medium",
+      "status": "Attention"
+    }
+  ],
+  "summary": {
+    "health_score": 85,
+    "risk_level": "Low",
+    "severity_counts": {
+      "Healthy": 2,
+      "High": 2,
+      "Medium": 1
+    },
+    "status_counts": {
+      "Attention": 3,
+      "Healthy": 2
+    },
+    "total_findings": 5
+  }
+}
