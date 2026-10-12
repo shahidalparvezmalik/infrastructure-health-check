@@ -26,5 +26,8 @@ jobs:
       - name: Run sample
         run: python examples/run_sample.py
 
+      - name: Run local diagnostic runner
+        run: python examples/run_local.py --skip-network --skip-dns --skip-services
+
       - name: Run tests
         run: python -m unittest discover -s tests -p "test_*.py"
