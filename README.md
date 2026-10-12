@@ -1,5 +1,9 @@
 # Infrastructure Health Check & IT Operations Diagnostics
 
+![Infrastructure Health Check](docs/images/infrastructure-health-check-cover.png)
+
+> **Project visual — turning infrastructure signals into health assessment, risk prioritization and operational action.**
+
 > Professional proof of concept | IT Infrastructure | IT Operations | Monitoring | Risk Prioritization | Automation
 
 A safe, reproducible infrastructure health-check proof of concept designed to demonstrate how an IT Operations team can move from **technical checks to operational risk visibility and management-ready reporting**.
