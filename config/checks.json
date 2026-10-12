@@ -1,0 +1,29 @@
+{
+  "thresholds": {
+    "cpu_percent": {
+      "medium": 80,
+      "high": 90,
+      "critical": 98
+    },
+    "memory_percent": {
+      "medium": 80,
+      "high": 90,
+      "critical": 95
+    },
+    "disk_free_percent": {
+      "medium": 20,
+      "high": 10,
+      "critical": 5
+    }
+  },
+  "network": {
+    "default_timeout_seconds": 3
+  },
+  "approved_targets": [
+    {
+      "name": "Localhost",
+      "host": "127.0.0.1",
+      "ports": [22, 80, 443]
+    }
+  ]
+}
