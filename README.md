@@ -1,5 +1,7 @@
 # Infrastructure Health Check & IT Operations Diagnostics
 
+[![Python validation](https://github.com/shahidalparvezmalik/infrastructure-health-check/actions/workflows/python.yml/badge.svg)](https://github.com/shahidalparvezmalik/infrastructure-health-check/actions/workflows/python.yml)
+
 ![Infrastructure Health Check](docs/images/infrastructure-health-check-cover.png)
 
 > **Project visual — turning infrastructure signals into health assessment, risk prioritization and operational action.**
@@ -53,10 +55,9 @@ Checks can include:
 
 Checks can include:
 
-- Host reachability
-- TCP connectivity to approved ports
-- Latency measurement
-- Packet-loss indicators where supported by the execution environment
+- Host reachability lookup
+- TCP connectivity to approved hosts and ports
+- Connection latency measurement
 
 ### 3. DNS Health
 
@@ -64,16 +65,18 @@ Checks can include:
 
 - DNS resolution success/failure
 - Resolution response time
-- Comparison of expected and observed addresses where configured
+- Observed canonical name, aliases and addresses
 
 ### 4. Service Health
 
 The workflow can identify:
 
-- Running services
-- Stopped services
+- Running Windows services
+- Stopped Windows services
 - Expected-but-missing services
 - Services requiring attention
+
+On non-Windows hosts, Windows service checks are marked **Not Evaluated** rather than failing the complete report.
 
 ### 5. Availability
 
@@ -154,6 +157,7 @@ infrastructure-health-check/
 │   ├── ARCHITECTURE.md
 │   ├── CHECK_DEFINITIONS.md
 │   ├── RISK_MODEL.md
+│   ├── EXAMPLE_OUTPUT.md
 │   └── LINKEDIN_ARTICLE.md
 ├── tests/
 │   └── test_health_checks.py
@@ -161,6 +165,14 @@ infrastructure-health-check/
     └── workflows/
         └── python.yml
 ```
+
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Check Definitions](docs/CHECK_DEFINITIONS.md)
+- [Operational Risk Model](docs/RISK_MODEL.md)
+- [Example Output](docs/EXAMPLE_OUTPUT.md)
+- [LinkedIn Article Draft](docs/LINKEDIN_ARTICLE.md)
 
 ## Getting Started
 
@@ -196,15 +208,11 @@ python examples/run_local.py --skip-network --skip-dns --skip-services
 
 Before adding network targets or Windows services, make sure you are authorized to query those systems. The runner does not modify the systems it checks.
 
-
-
-
 ## Executive Health Dashboard
 
 ![Infrastructure Health Check Executive Dashboard](docs/images/infrastructure-health-check-dashboard.png)
 
 > **Executive dashboard example — health score, severity distribution, component status, top findings and recommended operational actions.** Values shown are synthetic portfolio data.
-
 
 ## Example Output
 
@@ -238,21 +246,44 @@ Healthy: 2
 
 [Open the full example output](docs/EXAMPLE_OUTPUT.md)
 
+## Validation
+
+The repository includes automated validation through GitHub Actions.
+
+The workflow currently validates the project on:
+
+- Python 3.11
+- Python 3.12
+- Python 3.13
+
+Validation includes:
+
+- Synthetic sample execution
+- Read-only local diagnostic runner execution with network, DNS and Windows-service checks disabled
+- Unit tests
+
+[View GitHub Actions](https://github.com/shahidalparvezmalik/infrastructure-health-check/actions)
+
 ## Design Principles
 
 ### Safe by default
+
 The proof of concept should not make production changes.
 
 ### Read-only diagnostics
+
 Checks are intended to observe conditions rather than change them.
 
 ### Explainable results
+
 Every finding should contain a clear status, severity and recommendation.
 
 ### Management-oriented reporting
+
 Technical measurements should be translated into operational impact and next actions.
 
 ### Extensible architecture
+
 The project can later connect to enterprise monitoring, ITSM, CMDB, Power BI or automation platforms.
 
 ## Future Enhancements
@@ -279,8 +310,8 @@ This project demonstrates the operating concept:
 
 It complements the rest of the portfolio:
 
-- **IT Operations Dashboard** — ITSM data and operational analytics
-- **AI-Assisted IT Service Desk** — governed AI assistance and service workflow automation
+- [IT Operations Dashboard](https://github.com/shahidalparvezmalik/it-operations-dashboard) — ITSM data and operational analytics
+- [AI-Assisted IT Service Desk](https://github.com/shahidalparvezmalik/it-service-desk-automation) — governed AI assistance and service workflow automation
 - **Infrastructure Health Check** — infrastructure diagnostics and operational risk visibility
 
 Together, these projects present a broader **IT Infrastructure & Service Delivery leadership portfolio**.
