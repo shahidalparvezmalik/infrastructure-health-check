@@ -146,7 +146,8 @@ infrastructure-health-check/
 │   ├── health_score.py
 │   └── report.py
 ├── examples/
-│   └── run_sample.py
+│   ├── run_sample.py
+│   └── run_local.py
 ├── sample-data/
 │   └── sample_report.json
 ├── docs/
@@ -167,10 +168,34 @@ This project uses the Python standard library and does not require paid services
 
 ```bash
 python examples/run_sample.py
+python examples/run_local.py
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-The sample runner is designed to produce a deterministic portfolio report using sample diagnostic inputs.
+The sample runner produces a deterministic portfolio report using synthetic inputs. The local runner performs safe, read-only diagnostics against the current host and approved targets defined in `config/checks.json`.
+
+### Local Diagnostic Runner
+
+Run a read-only health check on the current machine:
+
+```bash
+python examples/run_local.py
+```
+
+Optionally write the results to JSON:
+
+```bash
+python examples/run_local.py --output local-health-report.json
+```
+
+For validation environments where network, DNS or Windows-service checks are not appropriate:
+
+```bash
+python examples/run_local.py --skip-network --skip-dns --skip-services
+```
+
+Before adding network targets or Windows services, make sure you are authorized to query those systems. The runner does not modify the systems it checks.
+
 
 ## Design Principles
 
