@@ -19,11 +19,18 @@
   "network": {
     "default_timeout_seconds": 3
   },
+  "dns_targets": [
+    "localhost"
+  ],
   "approved_targets": [
     {
       "name": "Localhost",
       "host": "127.0.0.1",
-      "ports": [22, 80, 443]
+      "ports": []
     }
+  ],
+  "windows_services": [
+    "Dnscache",
+    "W32Time"
   ]
 }
