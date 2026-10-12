@@ -12,7 +12,12 @@ sys.path.insert(0, str(SRC))
 
 from health_score import calculate_health_score, risk_level
 from report import build_report, management_summary
-from system_checks import classify_threshold, check_disk_free
+from system_checks import (
+    check_disk_free,
+    classify_threshold,
+    get_cpu_percent,
+    get_memory_percent,
+)
 
 
 class HealthCheckTests(unittest.TestCase):
@@ -41,6 +46,18 @@ class HealthCheckTests(unittest.TestCase):
         self.assertGreaterEqual(score, 0)
         self.assertLessEqual(score, 100)
         self.assertEqual(risk_level(score), "Medium")
+
+    def test_local_resource_readers_return_valid_values(self) -> None:
+        cpu = get_cpu_percent()
+        memory = get_memory_percent()
+
+        if cpu is not None:
+            self.assertGreaterEqual(cpu, 0.0)
+            self.assertLessEqual(cpu, 100.0)
+
+        if memory is not None:
+            self.assertGreaterEqual(memory, 0.0)
+            self.assertLessEqual(memory, 100.0)
 
     def test_report_has_management_summary(self) -> None:
         findings = [{"check": "DNS", "severity": "Healthy", "status": "Healthy"}]
