@@ -197,6 +197,39 @@ python examples/run_local.py --skip-network --skip-dns --skip-services
 Before adding network targets or Windows services, make sure you are authorized to query those systems. The runner does not modify the systems it checks.
 
 
+
+## Example Output
+
+The repository includes a deterministic synthetic example showing how technical findings are translated into an executive-friendly operational summary.
+
+### Executive View
+
+```text
+Infrastructure Health Check
+---------------------------
+Host: sample-server-01
+Health score: 85/100
+Risk level: Low
+Findings: 5
+Critical: 0
+High: 2
+Medium: 1
+Low: 0
+Healthy: 2
+```
+
+### Priority Findings
+
+| Severity | Finding | Recommended Action |
+|---|---|---|
+| High | Disk free capacity | Review storage growth, temporary files and application logs; plan capacity action |
+| High | Critical application service | Investigate service dependencies and restore the approved service |
+| Medium | Memory utilization | Review memory pressure and identify processes contributing to sustained utilization |
+
+**Management interpretation:** The synthetic example shows a low overall risk level with two high-priority conditions requiring attention.
+
+[Open the full example output](docs/EXAMPLE_OUTPUT.md)
+
 ## Design Principles
 
 ### Safe by default
