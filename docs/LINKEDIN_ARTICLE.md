@@ -315,7 +315,7 @@ That is the shift from **technical monitoring to operational intelligence**.
 **Infrastructure Health Check & IT Operations Diagnostics**
 
 GitHub:  
-https://github.com/shahidalsparvezmalik/infrastructure-health-check
+https://github.com/shahidalparvezmalik/infrastructure-health-check
 
 Professional portfolio:  
 https://shahidalparvezmalik.com/
@@ -330,9 +330,9 @@ https://shahidalparvezmalik.com/
 
 ## Recommended LinkedIn Visuals
 
-**Article cover:** `infrastructure-health-check-cover-1920x1080.png`
+**Article cover:** `infrastructure-health-check-cover.png`
 
-**In-article visual:** `infrastructure-health-check-dashboard-1920x1080.png`
+**In-article visual:** `infrastructure-health-check-dashboard.png`
 
 Recommended placement:
 
@@ -342,4 +342,4 @@ Recommended placement:
 
 ## Recommended Hashtags
 
-#ITOperations #ITInfrastructure #ITSM #ServiceDelivery #InfrastructureManagement #Monitoring #Automation #ITLeadership #IrishTech #Ireland
+#ITOperations #ITInfrastructure #ITSM #ServiceDelivery #InfrastructureManagement #Monitoring #Automation #ITLeadership #IrishTech #ireland
