@@ -172,7 +172,7 @@ infrastructure-health-check/
 - [Check Definitions](docs/CHECK_DEFINITIONS.md)
 - [Operational Risk Model](docs/RISK_MODEL.md)
 - [Example Output](docs/EXAMPLE_OUTPUT.md)
-- [LinkedIn Article Draft](docs/LINKEDIN_ARTICLE.md)
+- [LinkedIn Article: Infrastructure Health Checks: Turning Technical Signals into Operational Risk](https://www.linkedin.com/pulse/infrastructure-health-checks-turning-technical-signals-malik-d5dgc/) (published 12 October 2026)
 
 ## Getting Started
 
