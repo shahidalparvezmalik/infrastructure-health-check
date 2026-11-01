@@ -1,6 +1,6 @@
 # LinkedIn Short Post — Infrastructure Health Check
 
-**Draft for review — not published.**
+**Status:** Article published on LinkedIn on 12 October 2026.
 
 Infrastructure health is more than watching individual metrics. CPU, memory, disk capacity, DNS, network connectivity, and service state each provide a signal—but the real challenge is turning those signals into operational risk, service context, and a clear next step.
 
